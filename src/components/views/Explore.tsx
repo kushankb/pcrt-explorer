@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import clsx from 'clsx'
 import { HAZARD_GROUPS, MEASURES, MIN_N_FOR_MEDIAN, PARENT_DESC, TIERS, type TierDef } from '../../config'
 import { hazardLabel, matches, type Dataset, type PcrtRecord, type Selection } from '../../utils/data'
@@ -48,10 +48,10 @@ export function Explore({ ds, sel, records, update, goEvidence }: {
   const [hint1Done, markHint1] = useOnceFlag('pcrt-explorer-hint-hazard')
   const [hint2Done, markHint2] = useOnceFlag('pcrt-explorer-hint-row')
 
-  // Hint 1 is dismissed by the action it teaches: choosing a hazard or a state.
-  const firstSel = useRef(sel)
+  // Hint 1 is dismissed by the action it teaches: choosing a hazard or a state
+  // (or arriving from a link that already has one).
   useEffect(() => {
-    if (!hint1Done && (sel.hazard !== firstSel.current.hazard || sel.state !== firstSel.current.state)) markHint1()
+    if (!hint1Done && (sel.hazard.kind !== 'all' || sel.state)) markHint1()
   }, [sel.hazard, sel.state, hint1Done, markHint1])
 
   const rows = useMemo(() => buildTechRows(records, sel.benefit), [records, sel.benefit])
