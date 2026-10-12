@@ -1,0 +1,56 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --color-primary-blue: #4A9EFF;
+  --color-primary-dark: #0F172A;
+  --color-surface: #1E293B;
+}
+
+html, body { background: #020617; color: #cbd5e1; }
+body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+
+/* Restyled scrollbars */
+* { scrollbar-width: thin; scrollbar-color: #334155 #0F172A; }
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-track { background: #0F172A; }
+*::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+*::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+/* Recharts chrome */
+.recharts-default-tooltip,
+.chart-tooltip {
+  background: #1E293B !important;
+  border: 1px solid #334155 !important;
+  border-radius: 8px !important;
+  color: #cbd5e1;
+  font-size: 12px;
+  padding: 8px 10px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+}
+.recharts-cartesian-axis-tick-value { fill: #94a3b8; font-size: 11px; }
+.recharts-cartesian-grid line { stroke: #1e293b; }
+.recharts-text.recharts-label { fill: #94a3b8; font-size: 11px; }
+
+select.control {
+  appearance: none;
+  background: #0f172a url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%2394a3b8'/%3E%3C/svg%3E") no-repeat right 10px center;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  color: #e2e8f0;
+  font-size: 0.85rem;
+  padding: 0.45rem 2rem 0.45rem 0.7rem;
+}
+select.control:focus { outline: 2px solid #4A9EFF; outline-offset: 1px; }
+select.control optgroup { color: #94a3b8; font-style: normal; }
+select.control option { color: #e2e8f0; background: #0f172a; }
+
+.lift { transition: transform 200ms ease, box-shadow 200ms ease; }
+.lift:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35); }
+
+[role='button']:focus-visible, button:focus-visible { outline: 2px solid #4A9EFF; outline-offset: 2px; }
+
+@keyframes fade-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+.fade-in { animation: fade-in 200ms ease; }
+@keyframes slide-in { from { transform: translateX(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+.slide-in { animation: slide-in 200ms ease; }
