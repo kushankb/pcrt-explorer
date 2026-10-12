@@ -7,7 +7,7 @@ compendia for 19 Indian states and union territories. It answers one practical q
 *I'm in this state facing this hazard: what does PCRT suggest, and how far should I trust
 it?*
 
-Deployed via GitHub Pages to [kushankb.github.io/pcrt-explorer](https://kushankb.github.io/pcrt-explorer/).
+Deployed via GitHub Pages to [kushankbajaj.com/pcrt-explorer](https://kushankbajaj.com/pcrt-explorer/).
 
 > **Every figure in this app is a reported demonstration success. Read it as a ceiling,
 > not an expectation.** 99.3% of paired net-return records show the technology beating
@@ -167,4 +167,4 @@ Institute for Dryland Agriculture (CRIDA) / National Innovations in Climate Resi
 Agriculture (NICRA) state compendia (19 states/UTs). Harmonised classification v4
 (`PCRT_dataset_v4_classified_KB.xlsx`, October 2026).
 
-Tool: Kushank Bajaj, *PCRT Explorer* (2026), https://kushankb.github.io/pcrt-explorer/.
+Tool: Kushank Bajaj, *PCRT Explorer* (2026), https://kushankbajaj.com/pcrt-explorer/.

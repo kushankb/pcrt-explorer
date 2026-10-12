@@ -15,7 +15,7 @@ features (ceiling caveat in the header, n beside every median, evidence tiers, n
 below 5 values, gaps stated as findings) are the point of the app — do not remove or
 soften them.
 
-Deployed at https://kushankb.github.io/pcrt-explorer/ from `main` via GitHub Pages.
+Deployed at https://kushankbajaj.com/pcrt-explorer/ from `main` via GitHub Pages.
 
 ## Commands
 
